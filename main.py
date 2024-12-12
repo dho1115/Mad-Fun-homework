@@ -1,15 +1,18 @@
 if __name__ == "__main__":
-    from functions import absoluteValue, roundedNumber, squareRoot, Calculator, PlayAgain
+    from functions import absoluteValue, roundedNumber, squareRoot, PlayAgain
 
     DecimalInput = input("Enter a decimal number.");
+    
     try:
         floatNumber = float(DecimalInput);
         isDecimal = isinstance(floatNumber, float);
         print(dict(absoluteValue=absoluteValue(floatNumber), roundedNumber=roundedNumber(floatNumber), squareRoot=squareRoot(floatNumber)));
         '''
-        BONUS!!! CALCULATOR FEATURE.
+        ************************************
+            BONUS!!! CALCULATOR FEATURE.
+        ************************************
         '''
-        tryCalculator = input("Do you want to try the calculator? ");
+        tryCalculator = input("Do you want to try the calculator (y/n)? ");
         if tryCalculator.lower() == 'y': print(PlayAgain());
         else: print("="*7 + "thank you for playing!!!".title() + "="*7);
     
