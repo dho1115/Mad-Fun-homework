@@ -15,9 +15,7 @@ DictionaryOfFunctions = dict(absoluteValue= absoluteValue, roundedNumber=rounded
 
 def Calculator(num:float, desiredOperations:list, DictionaryOfFunctions:dict=DictionaryOfFunctions, overrides={"roundedTo": 0}):
    calculatedResults = [
-      { 
-         "roundedNumber": DictionaryOfFunctions.get(x)(num, overrides.get("roundedTo")) 
-      } 
+      { "roundedNumber": DictionaryOfFunctions.get(x)(num, overrides.get("roundedTo")) } 
       if x == 'roundedNumber' 
       else { f"{x}": DictionaryOfFunctions.get(x)(num) } #override if not rounded to zero.
       for x in desiredOperations
